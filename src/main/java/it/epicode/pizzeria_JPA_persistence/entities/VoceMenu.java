@@ -11,7 +11,7 @@ import lombok.*;
 @NoArgsConstructor
 public class VoceMenu {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     private String nome;
@@ -22,15 +22,6 @@ public class VoceMenu {
 
     public String print() {
         return "Bevanda: " + nome + " € " + prezzo + " calorie: " + calorie;
-    }
-
-    public void setNome(String margherita) {
-    }
-
-    public void setPrezzo(double v) {
-    }
-
-    public void setCalorie(int i) {
     }
 
 }

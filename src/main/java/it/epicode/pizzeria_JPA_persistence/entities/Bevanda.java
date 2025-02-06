@@ -1,14 +1,14 @@
 package it.epicode.pizzeria_JPA_persistence.entities;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Table(name="bevande")
 public class Bevanda extends VoceMenu {
 
     private int quantity;

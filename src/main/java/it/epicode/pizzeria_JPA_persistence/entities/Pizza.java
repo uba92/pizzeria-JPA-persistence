@@ -14,6 +14,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="pizze")
 public class Pizza extends VoceMenu {
 
     @OneToMany
