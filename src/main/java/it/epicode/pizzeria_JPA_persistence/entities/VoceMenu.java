@@ -1,19 +1,24 @@
 package it.epicode.pizzeria_JPA_persistence.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
+
 @Entity
 @Table(name="vocimenu")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class VoceMenu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String nome;
-    @Getter
     private double prezzo;
     private int calorie;
+
+
 
     public String print() {
         return "Bevanda: " + nome + " € " + prezzo + " calorie: " + calorie;

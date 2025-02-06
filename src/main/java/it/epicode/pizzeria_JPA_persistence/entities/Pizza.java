@@ -15,9 +15,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pizza extends VoceMenu {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
     @OneToMany
     private List<Topping> toppings = new ArrayList<>();
 

@@ -8,7 +8,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 public class Topping extends VoceMenu {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
 }

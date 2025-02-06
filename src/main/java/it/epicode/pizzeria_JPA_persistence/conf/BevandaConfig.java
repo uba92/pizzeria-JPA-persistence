@@ -9,21 +9,19 @@ public class BevandaConfig {
 
     @Bean
     public Bevanda cocaCola() {
-        Bevanda b = new Bevanda();
+        Bevanda b = new Bevanda(330);
         b.setNome("Coca Cola");
         b.setPrezzo(2.5);
         b.setCalorie(200);
-        b.setQuantity(330);
         return b;
     }
 
     @Bean
     public Bevanda fanta() {
-        Bevanda b = new Bevanda();
+        Bevanda b = new Bevanda(330);
         b.setNome("Fanta");
         b.setPrezzo(2.5);
         b.setCalorie(200);
-        b.setQuantity(330);
         return b;
     }
 
