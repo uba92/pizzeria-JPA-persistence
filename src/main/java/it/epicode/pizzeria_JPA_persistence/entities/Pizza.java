@@ -1,6 +1,5 @@
 package it.epicode.pizzeria_JPA_persistence.entities;
 
-import it.epicode.pizzeria_JPA_persistence.interfaces.VoceMenu;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,15 +14,11 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "pizze")
-public class Pizza implements VoceMenu {
+public class Pizza extends VoceMenu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    private String nome;
-    private double prezzo;
-    private int calorie;
+    @OneToMany
     private List<Topping> toppings = new ArrayList<>();
 
     public List<Topping> getTopping() {

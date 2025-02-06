@@ -1,7 +1,5 @@
 package it.epicode.pizzeria_JPA_persistence.entities;
 
-import it.epicode.pizzeria_JPA_persistence.interfaces.VoceMenu;
-import it.epicode.pizzeria_JPA_persistence.print.Printable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
