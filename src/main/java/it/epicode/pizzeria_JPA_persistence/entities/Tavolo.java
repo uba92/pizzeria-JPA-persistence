@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -17,6 +20,11 @@ public class Tavolo {
     private Long id;
     private int numeroTavolo;
     private int maxCoperti;
+
+    @Enumerated(EnumType.STRING)
     private StatoTavolo statoTavolo;
+
+    @OneToMany(mappedBy = "tavolo", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Ordine> listaOrdini = new ArrayList<>();
 
 }

@@ -12,7 +12,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Entity
+@Table(name = "ordini")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,10 +24,15 @@ public class Ordine implements Printable {
     private Long id;
 
     private int numeroOrdine;
+
+    @ManyToOne
+    @JoinColumn(name = "tavolo_id", nullable = false)
     private Tavolo tavolo;
+    @Enumerated(EnumType.STRING)
     private StatoOrdine statoOrdine;
     private int numeroCoperti;
     private LocalDateTime oraOrdine = LocalDateTime.now();
+    @ManyToMany
     private List<VoceMenu> listaElementiOrdine = new ArrayList<>();
     private double costoCoperto;
 

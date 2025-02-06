@@ -1,5 +1,6 @@
 package it.epicode.pizzeria_JPA_persistence.entities;
 
+import it.epicode.pizzeria_JPA_persistence.print.Printable;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,7 +10,7 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class VoceMenu {
+public class VoceMenu implements Printable {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -18,10 +19,8 @@ public class VoceMenu {
     private double prezzo;
     private int calorie;
 
-
-
     public String print() {
-        return "Bevanda: " + nome + " € " + prezzo + " calorie: " + calorie;
+        return nome + " € " + prezzo + " calorie: " + calorie;
     }
 
 }

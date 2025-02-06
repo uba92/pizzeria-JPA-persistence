@@ -7,7 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
-
+@Entity
+@Table(name = "menu")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +19,7 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
-    @OneToMany
+    @ManyToMany
     private List<VoceMenu> voceMenu = new ArrayList<>();
 
 }

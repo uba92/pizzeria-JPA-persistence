@@ -1,12 +1,18 @@
 package it.epicode.pizzeria_JPA_persistence.conf;
 
 import it.epicode.pizzeria_JPA_persistence.entities.Bevanda;
+import it.epicode.pizzeria_JPA_persistence.entities.Menu;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+import static java.awt.SystemColor.menu;
 
 @Configuration
 @Slf4j
+
 public class BevandaConfig {
 
     @Bean

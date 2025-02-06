@@ -17,7 +17,8 @@ import java.util.List;
 @Table(name="pizze")
 public class Pizza extends VoceMenu {
 
-    @OneToMany
+    @ManyToMany
+
     private List<Topping> toppings = new ArrayList<>();
 
     public List<Topping> getTopping() {
